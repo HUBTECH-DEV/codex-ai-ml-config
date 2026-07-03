@@ -48,6 +48,7 @@ jobs:
           if (-not (Test-Path -LiteralPath $target)) {
             throw "AGENTS.md was not installed."
           }
-          if (-not (Select-String -LiteralPath $target -SimpleMatch $env:GITHUB_WORKSPACE)) {
+          $repoForPrompt = $env:GITHUB_WORKSPACE.Replace("\", "/")
+          if (-not (Select-String -LiteralPath $target -SimpleMatch $repoForPrompt)) {
             throw "Installed pre-prompt does not reference the repository."
           }
