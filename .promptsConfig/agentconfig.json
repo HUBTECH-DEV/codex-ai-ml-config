@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "projectName": "Codex AI ML Config",
+  "createdAt": "2026-07-03T18:31:51Z",
+  "lastUpdated": "2026-07-03T18:31:51Z",
+  "currentVersion": 1,
+  "agentConfigurationPrompt": "Reusable project-aware Codex framework with dynamic remote loading, senior role routing, audited configuration, safe synchronization, and structured AI request governance.",
+  "agentProfile": "Adaptive Principal AI/ML, Prompt Engineering, MLOps and DevOps agent.",
+  "projectRules": [
+    "Load .promptsConfig/codex-primary-context.md as the primary project context.",
+    "Select and load only the required role from .promptsLibrary.",
+    "Use discovery-first execution and explicit human authorization for sensitive actions.",
+    "Maintain append-only configuration snapshots and prompt history.",
+    "Use GitHub or GitLab for versioning, traceability and Documentation as Code."
+  ],
+  "communicationRules": [
+    "Communicate directly and distinguish confirmed, inferred, pending and blocked states.",
+    "Expose assumptions, risks, incompatibilities and required decisions."
+  ],
+  "technicalRules": [
+    "Validate configuration schema, snapshot integrity and role checksums before loading.",
+    "Fetch before synchronization and pull only by fast-forward.",
+    "Never force push or automatically resolve divergent histories.",
+    "Never expose credentials or commit secrets."
+  ],
+  "customInstructions": [
+    "Install the global pre-prompt using the platform-specific installer.",
+    "Use the last locally validated context when the remote is unavailable."
+  ],
+  "metadata": {
+    "primaryContextFile": ".promptsConfig/codex-primary-context.md",
+    "roleLibraryFile": ".promptsLibrary/role-prompts-ti-senior.md",
+    "configurationSyncScript": "scripts/sync_codex_config.py",
+    "projectPath": "HUBTECH-DEV/codex-ai-ml-config"
+  }
+}

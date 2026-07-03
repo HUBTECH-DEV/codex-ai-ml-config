@@ -1,0 +1,418 @@
+{
+  "schemaVersion": "1.0",
+  "libraryFile": ".promptsLibrary/role-prompts-ti-senior.md",
+  "defaultBehavior": {
+    "tone": "logical_analytical_direct",
+    "decisionPolicy": "explicit_human_decision_when_required",
+    "operatingMode": "discovery_first",
+    "documentationTarget": "GitLab CE"
+  },
+  "roles": [
+    {
+      "id": "principal-product-strategist-senior-product-manager",
+      "name": "Principal Product Strategist / Senior Product Manager",
+      "area": "Produto / Estratégia",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-product-owner",
+      "name": "Principal Product Owner",
+      "area": "Produto / Agile",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-business-analyst",
+      "name": "Principal Business Analyst",
+      "area": "Produto / Requisitos",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-product-designer",
+      "name": "Principal Product Designer",
+      "area": "UX / UI / Produto",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-ux-researcher",
+      "name": "Principal UX Researcher",
+      "area": "UX Research",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-service-designer",
+      "name": "Principal Service Designer",
+      "area": "Service Design",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-data-product-manager",
+      "name": "Principal Data Product Manager",
+      "area": "Produto de Dados",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-api-product-manager",
+      "name": "Principal API Product Manager",
+      "area": "Produto de APIs",
+      "section": "Estratégia, Produto e Discovery",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-solution-architect",
+      "name": "Principal Solution Architect",
+      "area": "Arquitetura de Soluções",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-software-architect",
+      "name": "Principal Software Architect",
+      "area": "Arquitetura de Software",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-enterprise-architect",
+      "name": "Principal Enterprise Architect",
+      "area": "Arquitetura Corporativa",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-cloud-architect",
+      "name": "Principal Cloud Architect",
+      "area": "Cloud Architecture",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-integration-architect",
+      "name": "Principal Integration Architect",
+      "area": "Arquitetura de Integração",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-data-architect",
+      "name": "Principal Data Architect",
+      "area": "Arquitetura de Dados",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-security-architect",
+      "name": "Principal Security Architect",
+      "area": "Arquitetura de Segurança",
+      "section": "Arquitetura e Desenho de Solução",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-backend-engineer",
+      "name": "Principal Backend Engineer",
+      "area": "Engenharia Backend",
+      "section": "Engenharia de Software",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-frontend-engineer",
+      "name": "Principal Frontend Engineer",
+      "area": "Engenharia Frontend",
+      "section": "Engenharia de Software",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-full-stack-engineer",
+      "name": "Principal Full Stack Engineer",
+      "area": "Engenharia Full Stack",
+      "section": "Engenharia de Software",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-mobile-engineer",
+      "name": "Principal Mobile Engineer",
+      "area": "Engenharia Mobile",
+      "section": "Engenharia de Software",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-api-engineer",
+      "name": "Principal API Engineer",
+      "area": "Engenharia de APIs",
+      "section": "Engenharia de Software",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-ai-ml-engineer",
+      "name": "Principal AI/ML Engineer",
+      "area": "IA / ML",
+      "section": "IA, ML e Sistemas Inteligentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-prompt-engineer-ai-application-engineer",
+      "name": "Principal Prompt Engineer / AI Application Engineer",
+      "area": "IA Aplicada / Prompts",
+      "section": "IA, ML e Sistemas Inteligentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-mlops-engineer",
+      "name": "Principal MLOps Engineer",
+      "area": "MLOps",
+      "section": "IA, ML e Sistemas Inteligentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-qa-analyst",
+      "name": "Principal QA Analyst",
+      "area": "Qualidade Funcional",
+      "section": "Qualidade e Testes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-qa-engineer-sdet",
+      "name": "Principal QA Engineer / SDET",
+      "area": "Engenharia de Qualidade",
+      "section": "Qualidade e Testes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-performance-engineer",
+      "name": "Principal Performance Engineer",
+      "area": "Performance Engineering",
+      "section": "Qualidade e Testes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-accessibility-specialist",
+      "name": "Principal Accessibility Specialist",
+      "area": "Acessibilidade Digital",
+      "section": "Qualidade e Testes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-devops-engineer",
+      "name": "Principal DevOps Engineer",
+      "area": "DevOps / CI-CD",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-cloud-engineer",
+      "name": "Principal Cloud Engineer",
+      "area": "Cloud Engineering",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-platform-engineer",
+      "name": "Principal Platform Engineer",
+      "area": "Platform Engineering",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-site-reliability-engineer-sre",
+      "name": "Principal Site Reliability Engineer — SRE",
+      "area": "SRE / Confiabilidade",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-release-manager",
+      "name": "Principal Release Manager",
+      "area": "Release Management",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-implementation-engineer-deployment-engineer",
+      "name": "Principal Implementation Engineer / Deployment Engineer",
+      "area": "Implantação Técnica",
+      "section": "DevOps, Plataforma, Cloud e Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-application-security-engineer-appsec",
+      "name": "Principal Application Security Engineer — AppSec",
+      "area": "Application Security",
+      "section": "Segurança, Privacidade e Governança",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-devsecops-engineer",
+      "name": "Principal DevSecOps Engineer",
+      "area": "DevSecOps",
+      "section": "Segurança, Privacidade e Governança",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-security-engineer",
+      "name": "Principal Security Engineer",
+      "area": "Engenharia de Segurança",
+      "section": "Segurança, Privacidade e Governança",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-privacy-engineer-data-protection-specialist",
+      "name": "Principal Privacy Engineer / Data Protection Specialist",
+      "area": "Privacidade / Proteção de Dados",
+      "section": "Segurança, Privacidade e Governança",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-grc-it-risk-analyst",
+      "name": "Principal GRC / IT Risk Analyst",
+      "area": "GRC / Risco de TI",
+      "section": "Segurança, Privacidade e Governança",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-database-administrator-dba",
+      "name": "Principal Database Administrator — DBA",
+      "area": "Banco de Dados",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-database-reliability-engineer-dbre",
+      "name": "Principal Database Reliability Engineer — DBRE",
+      "area": "DBRE / Dados Confiáveis",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-data-engineer",
+      "name": "Principal Data Engineer",
+      "area": "Engenharia de Dados",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-analytics-engineer",
+      "name": "Principal Analytics Engineer",
+      "area": "Analytics Engineering",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-bi-developer-bi-analyst",
+      "name": "Principal BI Developer / BI Analyst",
+      "area": "BI / Analytics",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-data-governance-specialist",
+      "name": "Principal Data Governance Specialist",
+      "area": "Governança de Dados",
+      "section": "Dados, Banco de Dados e Analytics",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-scrum-master",
+      "name": "Principal Scrum Master",
+      "area": "Agile / Scrum",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-agile-coach",
+      "name": "Principal Agile Coach",
+      "area": "Transformação Ágil",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-delivery-manager",
+      "name": "Principal Delivery Manager",
+      "area": "Delivery Management",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-project-manager-technology",
+      "name": "Principal Project Manager — Technology",
+      "area": "Project Management",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-tech-lead",
+      "name": "Principal Tech Lead",
+      "area": "Liderança Técnica",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-engineering-manager",
+      "name": "Principal Engineering Manager",
+      "area": "Gestão de Engenharia",
+      "section": "Gestão Ágil, Entrega e Coordenação Técnica",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-technical-support-engineer",
+      "name": "Principal Technical Support Engineer",
+      "area": "Suporte Técnico",
+      "section": "Operação, Suporte e Pós-Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-solutions-engineer-customer-engineer",
+      "name": "Principal Solutions Engineer / Customer Engineer",
+      "area": "Pré/Pós-venda Técnica",
+      "section": "Operação, Suporte e Pós-Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-implementation-consultant",
+      "name": "Principal Implementation Consultant",
+      "area": "Consultoria de Implantação",
+      "section": "Operação, Suporte e Pós-Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-technical-account-manager-tam",
+      "name": "Principal Technical Account Manager — TAM",
+      "area": "Sucesso Técnico / Conta",
+      "section": "Operação, Suporte e Pós-Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-observability-engineer",
+      "name": "Principal Observability Engineer",
+      "area": "Observabilidade",
+      "section": "Operação, Suporte e Pós-Implantação",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-finops-engineer",
+      "name": "Principal FinOps Engineer",
+      "area": "FinOps",
+      "section": "Roles Especializadas Emergentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-developer-experience-engineer-devex",
+      "name": "Principal Developer Experience Engineer — DevEx",
+      "area": "Developer Experience",
+      "section": "Roles Especializadas Emergentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-systems-integration-engineer",
+      "name": "Principal Systems Integration Engineer",
+      "area": "Engenharia de Integração",
+      "section": "Roles Especializadas Emergentes",
+      "seniority": "principal"
+    }
+  ]
+}
