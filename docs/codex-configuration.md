@@ -1,7 +1,7 @@
 # Central Codex configuration
 
 This repository is the central source for project-aware Codex instructions,
-role routing and GitLab CE integration.
+role routing and remote Git integration.
 
 ## Components
 
@@ -16,6 +16,8 @@ role routing and GitLab CE integration.
 | `scripts/sync_codex_config.py` | Fast-forward pull or versioned commit/push |
 | `scripts/validate_codex_config.py` | Schema, audit-chain and checksum checks |
 | `config/codex-global-AGENTS.md` | Minimal global Codex bootstrap |
+| `installers/install-codex-framework.sh` | Linux/macOS installer |
+| `installers/install-codex-framework.ps1` | Windows PowerShell installer |
 
 ## Local validation
 
@@ -25,19 +27,26 @@ make codex-config-validate
 make codex-config-test
 ```
 
-## Install the global bootstrap
+## Install the global pre-prompt
 
-Run from a regular macOS terminal:
+Linux/macOS:
 
 ```sh
-make codex-global-install
+./installers/install-codex-framework.sh
 ```
 
-The installer backs up an existing `~/.codex/AGENTS.md` before atomically
-installing the new bootstrap. Restart Codex or open a new thread after
-installation.
+Windows PowerShell:
 
-## Configure the GitLab remote
+```powershell
+Set-ExecutionPolicy -Scope Process Bypass
+.\installers\install-codex-framework.ps1
+```
+
+Both installers validate the framework, back up an existing global
+`AGENTS.md`, render the repository's absolute path and install the pre-prompt
+atomically. Restart Codex or open a new thread after installation.
+
+## Configure the remote
 
 The synchronization script requires:
 
@@ -47,11 +56,10 @@ The synchronization script requires:
 - existing Git credentials for SSH or HTTPS;
 - `git user.name` and `git user.email` when a commit is necessary.
 
-Example using local GitLab SSH:
+GitHub SSH:
 
 ```sh
-git remote add origin \
-  ssh://git@localhost:2224/<namespace>/<project>.git
+git remote add origin git@github.com:HUBTECH-DEV/codex-ai-ml-config.git
 git ls-remote origin
 ```
 
@@ -93,7 +101,6 @@ At thread startup, the global bootstrap validates and, when possible,
 synchronizes this repository. Codex then reads the consolidated context and
 loads only the selected role from the role library.
 
-If GitLab is unreachable, the bootstrap reports the condition and uses only
-the last locally validated context. It must not write remotely or infer
+If the remote is unreachable, the bootstrap reports the condition and uses
+only the last locally validated context. It must not write remotely or infer
 permissions from configuration presence.
-
