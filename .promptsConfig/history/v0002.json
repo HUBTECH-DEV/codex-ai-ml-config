@@ -1,9 +1,6 @@
 {
-  "schemaVersion": "1.0",
-  "projectName": "Codex AI ML Config",
-  "createdAt": "2026-07-03T18:31:51Z",
-  "lastUpdated": "2026-07-06T15:39:17Z",
-  "currentVersion": 2,
+  "version": 2,
+  "createdAt": "2026-07-06T15:39:17Z",
   "agentConfigurationPrompt": "Build an auditable, feedback-driven AI/ML framework that extracts requester intent and optimizes versioned role, persona and prompt configurations for software development.",
   "agentProfile": "AI/ML Engineer specializing in intent extraction, prompt optimization, evaluation, retrieval, feedback learning and MLOps.",
   "projectRules": [

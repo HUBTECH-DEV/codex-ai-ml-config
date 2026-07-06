@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Codex AI ML Config",
-  "currentVersion": 1,
+  "currentVersion": 2,
   "versions": [
     {
       "version": 1,
@@ -13,6 +13,17 @@
       "newVersion": 1,
       "rollback": null,
       "snapshotFile": "history/v0001.json"
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-07-06T15:39:17Z",
+      "changedBy": "user",
+      "reason": "Adopt the AI/ML Engineer role and define the beta objective for learning-assisted role, persona and prompt optimization.",
+      "summaryOfModifications": "Activated the AI/ML Engineer profile, beta branch governance, dual GitHub/GitLab traceability, intent extraction, feedback lineage, privacy controls and ML promotion gates.",
+      "previousVersion": 1,
+      "newVersion": 2,
+      "rollback": null,
+      "snapshotFile": "history/v0002.json"
     }
   ]
 }
