@@ -1,0 +1,46 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hubtech.dev/schemas/aigw/prompt-config.schema.json",
+  "title": "PromptConfig",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "configId",
+    "version",
+    "components",
+    "hash",
+    "approval"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0" },
+    "configId": { "type": "string" },
+    "version": { "type": "integer", "minimum": 1 },
+    "components": {
+      "type": "object",
+      "required": ["coreRulesVersion", "roleVersion", "routerVersion", "compressionProfileVersion", "outputContractVersion"],
+      "properties": {
+        "coreRulesVersion": { "type": "string" },
+        "roleVersion": { "type": "string" },
+        "personaVersion": { "type": "string" },
+        "routerVersion": { "type": "string" },
+        "compressionProfileVersion": { "type": "string" },
+        "providerAdapterVersion": { "type": "string" },
+        "outputContractVersion": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "hash": { "type": "string" },
+    "approval": {
+      "type": "object",
+      "required": ["status"],
+      "properties": {
+        "status": { "type": "string", "enum": ["draft", "candidate", "approved", "rejected", "deprecated"] },
+        "approvedBy": { "type": "string" },
+        "approvedAt": { "type": "string", "format": "date-time" },
+        "evidenceRef": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}
