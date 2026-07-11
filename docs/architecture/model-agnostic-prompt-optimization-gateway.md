@@ -574,7 +574,7 @@ Before implementation, decide:
 5. Whether prompts/responses may be stored fully or only as sanitized pointers.
 6. Which OpenAI models are allowed in beta.
 7. Which tasks require mandatory human approval.
-8. Whether GitHub remains the first registry or GitLab CE becomes the canonical registry.
+8. How the GitHub canonical registry is promoted across beta, review and release flows.
 9. Retention policy for prompts, responses, diffs and embeddings.
 10. Maximum token budget by task class.
 

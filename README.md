@@ -60,7 +60,7 @@ python scripts/sync_codex_config.py
 A sincronização faz fetch primeiro, aceita somente fast-forward e nunca usa
 force push.
 
-## GitHub e GitLab
+## GitHub
 
 O remoto GitHub canônico é:
 
@@ -68,9 +68,8 @@ O remoto GitHub canônico é:
 git@github.com:HUBTECH-DEV/codex-ai-ml-config.git
 ```
 
-Os mesmos commits da branch `beta` devem ser publicados no projeto GitLab
-correspondente após a URL/namespace ser confirmado. Não crie um destino GitLab
-por inferência e não substitua remotos existentes sem revisar os históricos.
+A branch `beta` deve ser publicada no GitHub canônico acima. Não substitua
+remotos existentes sem revisar os históricos e não use force push.
 
 Neste workspace gerenciado, a política de filesystem não permite criar
 `.git`. O clone local usa `.gitdata` como diretório Git separado:

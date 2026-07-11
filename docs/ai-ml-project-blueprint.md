@@ -102,7 +102,7 @@ administrativa e ausência de comentário também não são labels suficientes.
 
 ```mermaid
 flowchart TB
-    sources["Codex, GitHub/GitLab, CI e feedback"] --> sanitize["Consentimento, allowlist e sanitização"]
+    sources["Codex, GitHub, CI e feedback"] --> sanitize["Consentimento, allowlist e sanitização"]
     sanitize --> eventdb["PostgreSQL: eventos, labels, avaliações e linhagem"]
     sanitize --> objects["S3 compatível: payloads grandes, datasets e artefatos"]
     eventdb --> features["Features versionadas"]
@@ -376,7 +376,7 @@ Antes da implementação, confirmar:
 4. provedor de embeddings/modelos permitido;
 5. volume e SLO estimados;
 6. owner da aprovação de configurações/modelos;
-7. destino GitLab (`namespace/projeto`) e política de espelhamento.
+7. destino GitHub (`HUBTECH-DEV/codex-ai-ml-config`) e política de publicação.
 
 ## 10. Referências técnicas
 

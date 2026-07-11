@@ -19,4 +19,3 @@ Fallback for AI platform work:
 - Principal Prompt Engineer / AI Application Engineer;
 - Principal MLOps Engineer;
 - Principal DevOps Engineer.
-

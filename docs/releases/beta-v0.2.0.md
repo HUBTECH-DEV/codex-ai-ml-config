@@ -34,7 +34,7 @@ python3 scripts/build_role_index.py --check
 
 - política de coleta/retensão ainda precisa de decisão;
 - métricas numéricas dependem do baseline;
-- destino GitLab precisa ser confirmado antes de criar projeto/remoto;
+- destino GitHub canônico confirmado em `HUBTECH-DEV/codex-ai-ml-config`;
 - ainda não há implementação do datastore nem dataset treinável.
 
 ## Rollback

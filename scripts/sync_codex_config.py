@@ -165,7 +165,7 @@ def main() -> None:
 
         probe = git(repo, "ls-remote", remote, check=False)
         if probe.returncode:
-            fail(f"GitLab/remoto inacessível ou sem autenticação: {probe.stderr.strip()}")
+            fail(f"remoto Git inacessível ou sem autenticação: {probe.stderr.strip()}")
 
         git(repo, "fetch", "--prune", remote)
         git(repo, "config", "pull.ff", "only")
@@ -195,7 +195,7 @@ def main() -> None:
                     "revise e integre manualmente"
                 )
             git(repo, "pull", "--ff-only", remote, branch, capture=False)
-            print(f"ATUALIZADO: [D] recebeu {behind} commit(s) do GitLab.")
+            print(f"ATUALIZADO: [D] recebeu {behind} commit(s) do remoto.")
             return
 
         if dirty:
@@ -240,7 +240,7 @@ def main() -> None:
 
         if ahead or not remote_exists:
             git(repo, "push", "--set-upstream", remote, f"HEAD:{branch}", capture=False)
-            print("PUBLICADO: baseline local de [D] enviado ao GitLab.")
+            print("PUBLICADO: baseline local de [D] enviado ao remoto.")
         else:
             print("SINCRONIZADO: versões local e remota de [D] são equivalentes.")
 

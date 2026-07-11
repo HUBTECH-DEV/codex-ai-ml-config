@@ -1,0 +1,17 @@
+{
+  "chatName": "github-migration-audit",
+  "createdAt": "2026-07-11T22:38:48Z",
+  "lastUpdated": "2026-07-11T22:38:48Z",
+  "messages": [
+    {
+      "timestamp": "2026-07-11T22:38:48Z",
+      "role": "user",
+      "content": "Verifique e aplique a configuração GitHub-first aos projetos Codex, criando ou atualizando repositórios em HUBTECH-DEV."
+    },
+    {
+      "timestamp": "2026-07-11T22:38:48Z",
+      "role": "assistant",
+      "content": "Configuração atualizada para GitHub-first com destino HUBTECH-DEV/codex-ai-ml-config; snapshot v0003 criado."
+    }
+  ]
+}

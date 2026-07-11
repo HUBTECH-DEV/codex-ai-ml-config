@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Codex AI ML Config",
-  "currentVersion": 2,
+  "currentVersion": 3,
   "versions": [
     {
       "version": 1,
@@ -24,6 +24,18 @@
       "newVersion": 2,
       "rollback": null,
       "snapshotFile": "history/v0002.json"
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-07-11T22:38:48Z",
+      "changedBy": "user",
+      "reason": "User requested all Codex projects to align with GitHub/HUBTECH-DEV and be published or updated on GitHub.",
+      "summaryOfModifications": "Applied GitHub-first governance metadata and repository routing for HUBTECH-DEV/codex-ai-ml-config.",
+      "summary": "Applied GitHub-first governance metadata and repository routing for HUBTECH-DEV/codex-ai-ml-config.",
+      "previousVersion": 2,
+      "newVersion": 3,
+      "rollback": null,
+      "snapshotFile": "history/v0003.json"
     }
   ]
 }

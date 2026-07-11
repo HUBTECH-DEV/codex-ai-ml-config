@@ -19,4 +19,4 @@ Git will be the canonical registry for prompt-related configuration, documentati
 
 ## Consequences
 
-The project keeps configuration changes reviewable and compatible with GitHub/GitLab workflows.
+The project keeps configuration changes reviewable and compatible with GitHub workflows.

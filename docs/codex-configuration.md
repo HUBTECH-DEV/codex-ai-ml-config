@@ -1,7 +1,8 @@
 # Central Codex configuration
 
-This repository is the central source for project-aware Codex instructions,
-role routing and remote Git integration.
+This repository is the source for project-aware Codex instructions, role
+routing and remote Git integration. New Codex projects should use GitHub under
+the `HUBTECH-DEV` organization by default.
 
 ## Components
 
@@ -27,7 +28,37 @@ make codex-config-validate
 make codex-config-test
 ```
 
-## Install the global pre-prompt
+## Install the global bootstrap
+
+Run from a regular macOS terminal:
+
+```sh
+make codex-global-install
+```
+
+The installer backs up an existing `~/.codex/AGENTS.md` before atomically
+installing the new bootstrap. Restart Codex or open a new thread after
+installation.
+
+## Standalone framework repository
+
+The clean distribution is published at:
+
+```text
+https://github.com/HUBTECH-DEV/codex-ai-ml-config
+```
+
+Generate or refresh the local fallback copy:
+
+```sh
+make codex-framework-copy
+```
+
+The fallback is written to `local-projects/codex-ai-ml-config` as an
+independent Git repository candidate without migration files, secrets or
+project chat histories.
+
+Install from the standalone repository:
 
 Linux/macOS:
 
@@ -42,9 +73,9 @@ Set-ExecutionPolicy -Scope Process Bypass
 .\installers\install-codex-framework.ps1
 ```
 
-Both installers validate the framework, back up an existing global
-`AGENTS.md`, render the repository's absolute path and install the pre-prompt
-atomically. Restart Codex or open a new thread after installation.
+Both installers validate the configuration, back up an existing global
+`AGENTS.md`, render the absolute repository path and install the pre-prompt
+atomically.
 
 ## Configure the remote
 
@@ -56,7 +87,7 @@ The synchronization script requires:
 - existing Git credentials for SSH or HTTPS;
 - `git user.name` and `git user.email` when a commit is necessary.
 
-GitHub SSH:
+Example using GitHub SSH:
 
 ```sh
 git remote add origin git@github.com:HUBTECH-DEV/codex-ai-ml-config.git

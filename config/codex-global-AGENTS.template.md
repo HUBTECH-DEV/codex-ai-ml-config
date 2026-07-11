@@ -1,6 +1,8 @@
 # Global Codex configuration bootstrap
 
 Use `{{CONFIG_REPO}}` as the central AI/ML prompt configuration repository.
+When this repository has a historical directory name, treat it as a filesystem
+path only; active Codex project publication uses GitHub/HUBTECH-DEV.
 
 Before project work:
 
@@ -28,4 +30,3 @@ If synchronization is unavailable, report it and use only the last locally
 validated context. Never expose credentials or treat failed connectivity as
 permission to write, replace remotes, merge divergent histories, or force
 push.
-
