@@ -66,7 +66,7 @@ def build_index(library: Path) -> dict[str, object]:
             "tone": "logical_analytical_direct",
             "decisionPolicy": "explicit_human_decision_when_required",
             "operatingMode": "discovery_first",
-            "documentationTarget": "GitLab CE",
+            "documentationTarget": "GitHub/HUBTECH-DEV",
         },
         "roles": roles,
     }
@@ -98,4 +98,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

@@ -46,4 +46,3 @@ trap - EXIT HUP INT TERM
 echo "Installed: ${target}"
 echo "Configuration repository: ${repo_dir}"
 echo "Restart Codex or open a new thread."
-

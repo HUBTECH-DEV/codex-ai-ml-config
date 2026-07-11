@@ -94,7 +94,7 @@ def validate_context(root: Path) -> int:
     require(bool(metadata.get("lastUpdated")), "context lastUpdated is missing")
 
     required_phrases = (
-        "Já existe um projeto correspondente no GitLab CE",
+        "Já existe um repositório correspondente no GitHub/HUBTECH-DEV",
         "Autoriza iniciar a migração da documentação",
         "pull apenas fast-forward",
         "Principal AI/ML Engineer",
@@ -172,4 +172,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

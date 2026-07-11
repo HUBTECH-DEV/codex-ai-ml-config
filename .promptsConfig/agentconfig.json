@@ -1,8 +1,8 @@
 {
   "schemaVersion": "1.0",
   "projectName": "Codex AI ML Config",
-  "createdAt": "2026-07-03T18:31:51Z",
-  "lastUpdated": "2026-07-03T18:31:51Z",
+  "createdAt": "2026-07-11T22:22:09Z",
+  "lastUpdated": "2026-07-11T22:22:09Z",
   "currentVersion": 1,
   "agentConfigurationPrompt": "Reusable project-aware Codex framework with dynamic remote loading, senior role routing, audited configuration, safe synchronization, and structured AI request governance.",
   "agentProfile": "Adaptive Principal AI/ML, Prompt Engineering, MLOps and DevOps agent.",
@@ -11,7 +11,7 @@
     "Select and load only the required role from .promptsLibrary.",
     "Use discovery-first execution and explicit human authorization for sensitive actions.",
     "Maintain append-only configuration snapshots and prompt history.",
-    "Use GitHub or GitLab for versioning, traceability and Documentation as Code."
+    "Use GitHub/HUBTECH-DEV for versioning, traceability and Documentation as Code."
   ],
   "communicationRules": [
     "Communicate directly and distinguish confirmed, inferred, pending and blocked states.",

@@ -88,4 +88,3 @@ try {
 Write-Host "Installed: $target"
 Write-Host "Configuration repository: $repo"
 Write-Host "Restart Codex or open a new thread."
-
