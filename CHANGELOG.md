@@ -3,6 +3,50 @@
 Todas as alterações relevantes deste projeto são registradas aqui e nas
 release notes versionadas.
 
+## [0.4.0-beta] - 2026-07-30
+
+### Adicionado
+
+- identidade tecnológica agnóstica **HubICG — Hubtech Intent & Context
+  Governance Framework**;
+- configuração auditada v4, snapshot imutável `v0004` e registro de chat da
+  integração P0;
+- 60 roles indexadas, incluindo editoração multiformato e engenharia Git;
+- schemas executáveis, validação de segredos, testes automatizados e workflow
+  de CI para `main` e `beta`;
+- sincronização Git opt-in com autorizações independentes para `fetch`,
+  `pull`, `commit` e `push`;
+- release notes em `docs/releases/beta-v0.4.0.md`.
+
+### Alterado
+
+- branch padrão da integração beta definida como `beta`;
+- documentação ativa e metadados migrados para o repositório canônico
+  `HUBTECH-DEV/hubtech-intent-context-governance-framework`;
+- Codex e OpenAI tratados como superfícies/adaptadores iniciais, sem acoplar a
+  identidade ou o núcleo do framework;
+- especificações incubadas na beta catalogadas como propostas, sem indicar
+  implementação inexistente.
+
+### Preservado
+
+- snapshots `v0001`, `v0002` e `v0003`, três históricos de chat anteriores e
+  as release notes `beta-v0.2.0.md` sem alteração de bytes;
+- dez ADRs da incubação com status `Proposed`.
+
+## [0.3.0-beta] - 2026-07-11
+
+### Adicionado
+
+- configuração auditada v3 e snapshot imutável `v0003`;
+- auditoria da migração e governança GitHub-first na organização
+  `HUBTECH-DEV`.
+
+### Alterado
+
+- roteamento do repositório e política de publicação registrados na
+  configuração histórica v3.
+
 ## [0.2.0-beta] - 2026-07-06
 
 ### Adicionado

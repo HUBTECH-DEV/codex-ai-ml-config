@@ -1,4 +1,4 @@
-name: Validate framework
+name: Validate HubICG
 
 on:
   push:
@@ -10,6 +10,7 @@ permissions:
 
 jobs:
   validate:
+    timeout-minutes: 10
     strategy:
       fail-fast: false
       matrix:
@@ -26,8 +27,20 @@ jobs:
       - name: Validate configuration
         run: python scripts/validate_codex_config.py --quiet
 
+      - name: Validate JSON schemas
+        run: python scripts/validate_schemas.py --quiet
+
+      - name: Check deterministic role index
+        run: python scripts/build_role_index.py --check
+
+      - name: Run unit and Git safety tests
+        run: python -m unittest discover -s tests -v
+
+      - name: Scan for common secret formats
+        run: python scripts/scan_secrets.py
+
       - name: Compile Python scripts
-        run: python -m py_compile scripts/build_role_index.py scripts/sync_codex_config.py scripts/validate_codex_config.py
+        run: python -m compileall -q scripts tests
 
       - name: Test Linux/macOS installer
         if: runner.os == 'Linux'

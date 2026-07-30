@@ -4,7 +4,7 @@
 
 ## Motivação e impacto
 
-<!-- Relacione a alteração ao objetivo AI/ML e ao comportamento observado. -->
+<!-- Relacione a alteração aos objetivos do HubICG e ao comportamento observado. -->
 
 ## Evidências
 
@@ -14,7 +14,7 @@
 - [ ] Métricas comparadas com o baseline
 - [ ] Riscos, compatibilidade e rollback documentados
 
-## Linhagem AI/ML
+## Linhagem HubICG e AI/ML
 
 <!-- Informe dataset, experimento/modelo e prompt_config_version, se aplicável. -->
 

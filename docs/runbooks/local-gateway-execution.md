@@ -1,13 +1,17 @@
-# Runbook — Local Gateway Execution
+# HubICG Runbook — Proposed Local Gateway Execution
 
-Status: proposal  
+Status: proposal — not executable in the current repository
+
 Target audience: developers and operators
 
 ---
 
 ## 1. Purpose
 
-This runbook describes the intended local execution model for the Prompt Optimization Gateway.
+This runbook describes the intended future local execution model for the
+Prompt Optimization Gateway. The `aigw` commands, daemon, endpoints and
+environment variables below are interface sketches; they are not shipped by
+the current beta.
 
 The gateway should run locally or near the developer environment so it can use local repository context while relying on the developer's own credentials, SSH keys and provider API keys.
 
@@ -27,16 +31,16 @@ The gateway should run locally or near the developer environment so it can use l
 ## 3. Expected local flow
 
 ```text
-Developer -> IDE/Codex -> local gateway -> provider adapter -> model
+Human -> interface adapter -> local gateway -> provider adapter -> model
 ```
 
-For the MVP, the developer should be able to run:
+For the proposed MVP, a future CLI could expose:
 
 ```bash
-aigw ask --project codex-ai-ml-config --task "Explain and refactor module X"
+aigw ask --project intent-context-governance --task "Explain and refactor module X"
 ```
 
-Or call a local daemon:
+Or a future client could call a local daemon:
 
 ```bash
 curl -X POST http://localhost:8787/v1/ide/request \
@@ -57,7 +61,7 @@ Dry-run mode should:
 5. estimate tokens;
 6. skip provider invocation.
 
-Example:
+Illustrative future command:
 
 ```bash
 aigw ask --dry-run --task "Create ADR for provider abstraction"
@@ -67,7 +71,7 @@ aigw ask --dry-run --task "Create ADR for provider abstraction"
 
 ## 5. Required local configuration
 
-Example `.env` file:
+Illustrative future `.env` file for the first OpenAI adapter candidate:
 
 ```bash
 OPENAI_API_KEY="replace-locally-only"

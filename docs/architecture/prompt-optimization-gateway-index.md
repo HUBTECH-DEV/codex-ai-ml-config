@@ -1,6 +1,11 @@
-# Prompt Optimization Gateway — Documentation Index
+# HubICG Prompt Optimization Gateway — Documentation Index
 
-This folder contains the architecture proposal for a model-agnostic Prompt Optimization Gateway initially targeting OpenAI and Codex-oriented development workflows.
+Status: proposal incubated on `beta`
+
+This folder catalogs the proposed model-agnostic HubICG gateway. OpenAI and
+Codex are candidate first adapters, not requirements of the core or the
+project identity. The repository currently supplies configuration governance,
+schemas, roles and validation; it does not yet supply an executable gateway.
 
 ## Primary documents
 

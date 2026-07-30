@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HUBTECH-DEV/hubtech-intent-context-governance-framework/raw/main/schemas/agentconfig-history.schema.json",
+  "title": "HubICG append-only configuration history",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "projectName",
+    "currentVersion",
+    "versions"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "projectName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "currentVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "versions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "version",
+          "timestamp",
+          "changedBy",
+          "reason",
+          "summaryOfModifications",
+          "previousVersion",
+          "newVersion",
+          "rollback",
+          "snapshotFile"
+        ],
+        "properties": {
+          "version": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "changedBy": {
+            "type": "string",
+            "minLength": 1
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summaryOfModifications": {
+            "type": "string",
+            "minLength": 1
+          },
+          "summary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "previousVersion": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "newVersion": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "rollback": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "snapshotFile": {
+            "type": "string",
+            "pattern": "^history/v[0-9]{4}\\.json$"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

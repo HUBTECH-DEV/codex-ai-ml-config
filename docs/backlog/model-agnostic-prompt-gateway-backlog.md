@@ -1,7 +1,24 @@
-# Backlog — Model-Agnostic Prompt Optimization Gateway
+# HubICG Backlog — Model-Agnostic Prompt Optimization Gateway
 
 Status: initial proposal  
 Target branch: `beta`
+
+No gateway binary or service is implemented in this repository. The current
+P0 foundation supplies versioned configuration, roles, schemas, a static
+secret scanner, validators, tests and CI.
+
+| Epic | Status on `beta` |
+|---|---|
+| 1 — Architecture foundation | Partial: selected schemas, contract, index and proposed ADRs |
+| 2 — Local gateway MVP | Proposed |
+| 3 — Sanitization and policy | Partial foundation: repository secret scanner only |
+| 4 — Intent extraction and role routing | Partial foundation: role index and schemas only |
+| 5 — Prompt optimization and compression | Proposed |
+| 6 — OpenAI provider adapter | Proposed candidate adapter |
+| 7 — Storage and telemetry | Proposed |
+| 8 — Evaluation and quality gates | Proposed |
+| 9 — Developer experience | Documentation only |
+| 10 — Future provider expansion | Proposed |
 
 ---
 

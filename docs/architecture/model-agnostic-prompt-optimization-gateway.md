@@ -1,21 +1,31 @@
-# Model-Agnostic Prompt Optimization Gateway
+# HubICG — Model-Agnostic Prompt Optimization Gateway
 
 Status: proposal  
 Target branch: `beta`  
 Audience: developers, maintainers, sponsors and technical decision makers  
-Initial provider: OpenAI  
-Initial IDE/agent surface: Codex  
+Initial provider adapter candidate: OpenAI
+
+Initial IDE/agent surface adapter candidate: Codex
 Architecture stance: model-agnostic by contract, OpenAI-first by implementation
 
 ---
 
 ## 1. Executive summary
 
-This project proposes a local or near-local gateway that runs in parallel to the IDE and acts as a controlled interface between developer requests and AI models.
+HubICG proposes a local or near-local gateway that runs in parallel to the IDE
+and acts as a controlled interface between human requests and AI models.
+
+The current repository implements governance foundations—versioned
+configuration, roles, schemas, history, validators, tests and CI. The gateway
+runtime, provider invocation, telemetry stores and learning pipelines in this
+document remain proposals.
 
 The gateway receives raw requests from Codex or another IDE/agent surface, sanitizes the input, extracts intent, selects the appropriate role and context, applies prompt optimization techniques, routes the cleaned request to a model provider, and records lineage, metrics, cost, feedback and evaluation results.
 
-The first implementation targets OpenAI models and Codex-oriented workflows. The core domain, however, must remain independent from OpenAI APIs. OpenAI is only the first `ProviderAdapter`.
+The proposed first integration targets OpenAI models and Codex-oriented
+workflows. They are initial adapters only: the core domain and the HubICG
+identity remain independent from OpenAI APIs, model vendors and development
+surfaces.
 
 The project should be understood as a control plane for:
 
@@ -468,7 +478,7 @@ quality_gate:
 ### 12.1 MVP name
 
 ```text
-AI Gateway for Codex Prompt Optimization
+HubICG Local Prompt Governance Gateway
 ```
 
 ### 12.2 MVP capabilities
@@ -482,7 +492,8 @@ The MVP must:
 5. select a role and output contract;
 6. retrieve minimal context;
 7. compact the prompt using a conservative or balanced profile;
-8. invoke OpenAI through the provider adapter;
+8. invoke the configured provider through an adapter (OpenAI in the first
+   candidate implementation);
 9. persist prompt hash, model, token usage, cost and latency;
 10. return the model response and gateway metadata.
 

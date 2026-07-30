@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "projectName": "Codex AI ML Config",
-  "currentVersion": 3,
+  "projectName": "HubICG — Hubtech Intent & Context Governance Framework",
+  "currentVersion": 4,
   "versions": [
     {
       "version": 1,
@@ -36,6 +36,17 @@
       "newVersion": 3,
       "rollback": null,
       "snapshotFile": "history/v0003.json"
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-07-30T13:40:00Z",
+      "changedBy": "user-approved-p0",
+      "reason": "Adopt the HubICG identity and integrate the approved P0 main baseline into beta without rewriting prior snapshots or chat histories.",
+      "summaryOfModifications": "Created the provider-agnostic beta v4 configuration, inherited safe opt-in Git synchronization, schemas, 60 roles, tests and CI, preserved beta specifications with truthful status, and registered the canonical repository plus legacy migration alias.",
+      "previousVersion": 3,
+      "newVersion": 4,
+      "rollback": null,
+      "snapshotFile": "history/v0004.json"
     }
   ]
 }

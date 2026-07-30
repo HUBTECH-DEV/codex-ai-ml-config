@@ -1,10 +1,15 @@
-# Blueprint AI/ML para otimização de configurações e prompts
+# HubICG — Blueprint AI/ML para governança de intenção e contexto
 
 Status: proposta técnica da branch `beta`
 
-Configuração relacionada: versão 2
+Configuração relacionada: versão 4
 
-Última atualização: 2026-07-06
+Última atualização: 2026-07-30
+
+Estado de implementação: este repositório já entrega a fundação de
+configuração, roles, schemas, histórico append-only, validações e CI. Os
+serviços de armazenamento, recomendação, treinamento e execução descritos
+neste blueprint continuam propostos e não estão disponíveis como runtime.
 
 ## 1. Objetivo atual
 
@@ -102,7 +107,7 @@ administrativa e ausência de comentário também não são labels suficientes.
 
 ```mermaid
 flowchart TB
-    sources["Codex, GitHub, CI e feedback"] --> sanitize["Consentimento, allowlist e sanitização"]
+    sources["Interfaces de agente, Git, CI e feedback"] --> sanitize["Consentimento, allowlist e sanitização"]
     sanitize --> eventdb["PostgreSQL: eventos, labels, avaliações e linhagem"]
     sanitize --> objects["S3 compatível: payloads grandes, datasets e artefatos"]
     eventdb --> features["Features versionadas"]
@@ -376,7 +381,8 @@ Antes da implementação, confirmar:
 4. provedor de embeddings/modelos permitido;
 5. volume e SLO estimados;
 6. owner da aprovação de configurações/modelos;
-7. destino GitHub (`HUBTECH-DEV/codex-ai-ml-config`) e política de publicação.
+7. política de publicação do repositório canônico
+   (`HUBTECH-DEV/hubtech-intent-context-governance-framework`).
 
 ## 10. Referências técnicas
 
