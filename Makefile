@@ -2,6 +2,7 @@
 	sync-fetch sync-pull sync-commit sync-push
 
 PYTHON ?= python3
+HUBICG_BRANCH ?= beta
 
 validate:
 	$(PYTHON) scripts/validate_codex_config.py
@@ -30,16 +31,16 @@ install: validate
 sync: sync-status
 
 sync-status: validate
-	$(PYTHON) scripts/sync_codex_config.py
+	$(PYTHON) scripts/sync_codex_config.py --branch $(HUBICG_BRANCH)
 
 sync-fetch: validate
-	$(PYTHON) scripts/sync_codex_config.py --fetch
+	$(PYTHON) scripts/sync_codex_config.py --branch $(HUBICG_BRANCH) --fetch
 
 sync-pull: validate
-	$(PYTHON) scripts/sync_codex_config.py --pull
+	$(PYTHON) scripts/sync_codex_config.py --branch $(HUBICG_BRANCH) --pull
 
 sync-commit: validate
-	$(PYTHON) scripts/sync_codex_config.py --commit
+	$(PYTHON) scripts/sync_codex_config.py --branch $(HUBICG_BRANCH) --commit
 
 sync-push: validate
-	$(PYTHON) scripts/sync_codex_config.py --push
+	$(PYTHON) scripts/sync_codex_config.py --branch $(HUBICG_BRANCH) --push

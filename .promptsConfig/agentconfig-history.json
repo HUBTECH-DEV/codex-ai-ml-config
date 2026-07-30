@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
   "projectName": "HubICG — Hubtech Intent & Context Governance Framework",
-  "currentVersion": 2,
+  "currentVersion": 4,
   "versions": [
     {
       "version": 1,
-      "timestamp": "2026-07-11T22:22:09Z",
+      "timestamp": "2026-07-03T18:31:51Z",
       "changedBy": "user",
       "reason": "Initial reusable Codex AI/ML framework baseline.",
       "summaryOfModifications": "Created dynamic context loading, role routing, audited configuration and cross-platform installers.",
@@ -16,14 +16,37 @@
     },
     {
       "version": 2,
-      "timestamp": "2026-07-30T13:14:24Z",
-      "changedBy": "user-approved-p0",
-      "reason": "Adopt the provider-agnostic HubICG identity and approved P0 governance baseline.",
-      "summaryOfModifications": "Renamed the active framework, registered its HGC module identity and legacy alias, separated synchronization authorizations, and established honest capability-status reporting.",
+      "timestamp": "2026-07-06T15:39:17Z",
+      "changedBy": "user",
+      "reason": "Adopt the AI/ML Engineer role and define the beta objective for learning-assisted role, persona and prompt optimization.",
+      "summaryOfModifications": "Activated the AI/ML Engineer profile, beta branch governance, dual GitHub/GitLab traceability, intent extraction, feedback lineage, privacy controls and ML promotion gates.",
       "previousVersion": 1,
       "newVersion": 2,
       "rollback": null,
       "snapshotFile": "history/v0002.json"
+    },
+    {
+      "version": 3,
+      "timestamp": "2026-07-11T22:38:48Z",
+      "changedBy": "user",
+      "reason": "User requested all Codex projects to align with GitHub/HUBTECH-DEV and be published or updated on GitHub.",
+      "summaryOfModifications": "Applied GitHub-first governance metadata and repository routing for HUBTECH-DEV/codex-ai-ml-config.",
+      "summary": "Applied GitHub-first governance metadata and repository routing for HUBTECH-DEV/codex-ai-ml-config.",
+      "previousVersion": 2,
+      "newVersion": 3,
+      "rollback": null,
+      "snapshotFile": "history/v0003.json"
+    },
+    {
+      "version": 4,
+      "timestamp": "2026-07-30T13:40:00Z",
+      "changedBy": "user-approved-p0",
+      "reason": "Adopt the HubICG identity and integrate the approved P0 main baseline into beta without rewriting prior snapshots or chat histories.",
+      "summaryOfModifications": "Created the provider-agnostic beta v4 configuration, inherited safe opt-in Git synchronization, schemas, 60 roles, tests and CI, preserved beta specifications with truthful status, and registered the canonical repository plus legacy migration alias.",
+      "previousVersion": 3,
+      "newVersion": 4,
+      "rollback": null,
+      "snapshotFile": "history/v0004.json"
     }
   ]
 }

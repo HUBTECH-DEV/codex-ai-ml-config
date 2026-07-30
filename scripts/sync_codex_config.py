@@ -466,7 +466,7 @@ def parse_args() -> argparse.Namespace:
         "--branch",
         default=os.environ.get(
             "HUBICG_BRANCH",
-            os.environ.get("CODEX_CONFIG_BRANCH", "main"),
+            os.environ.get("CODEX_CONFIG_BRANCH", "beta"),
         ),
     )
     parser.add_argument(

@@ -1,0 +1,101 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hubtech.dev/schemas/aigw/canonical-request.schema.json",
+  "title": "CanonicalRequest",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "requestId",
+    "project",
+    "userRequest",
+    "intent",
+    "prompt",
+    "routing",
+    "governance"
+  ],
+  "properties": {
+    "schemaVersion": { "type": "string", "const": "1.0" },
+    "requestId": { "type": "string", "format": "uuid" },
+    "project": {
+      "type": "object",
+      "required": ["projectId"],
+      "properties": {
+        "projectId": { "type": "string" },
+        "repository": { "type": "string" },
+        "branch": { "type": "string" },
+        "revision": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "userRequest": {
+      "type": "object",
+      "required": ["sanitizedText"],
+      "properties": {
+        "originalTextRef": { "type": "string" },
+        "sanitizedText": { "type": "string" },
+        "source": { "type": "string", "enum": ["cli", "ide", "daemon", "api", "test"] }
+      },
+      "additionalProperties": false
+    },
+    "intent": { "$ref": "intent-extraction.schema.json" },
+    "prompt": {
+      "type": "object",
+      "required": ["staticPrefix", "dynamicContext", "compression"],
+      "properties": {
+        "staticPrefix": {
+          "type": "object",
+          "properties": {
+            "coreRulesRef": { "type": "string" },
+            "roleRef": { "type": "string" },
+            "outputContractRef": { "type": "string" },
+            "toolSchemaRefs": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "dynamicContext": {
+          "type": "object",
+          "properties": {
+            "userPrompt": { "type": "string" },
+            "selectedFiles": { "type": "array", "items": { "type": "string" } },
+            "retrievedPatterns": { "type": "array", "items": { "type": "string" } },
+            "diffs": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        },
+        "compression": {
+          "type": "object",
+          "required": ["profile"],
+          "properties": {
+            "profile": { "type": "string", "enum": ["none", "conservative", "balanced", "aggressive"] },
+            "targetInputTokens": { "type": "integer", "minimum": 1 },
+            "preserveFields": { "type": "array", "items": { "type": "string" } }
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    },
+    "routing": {
+      "type": "object",
+      "required": ["provider", "model"],
+      "properties": {
+        "provider": { "type": "string" },
+        "model": { "type": "string" },
+        "fallbackModels": { "type": "array", "items": { "type": "string" } },
+        "reason": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "governance": {
+      "type": "object",
+      "required": ["privacyClass", "retentionPolicy", "humanApprovalRequired"],
+      "properties": {
+        "privacyClass": { "type": "string" },
+        "retentionPolicy": { "type": "string" },
+        "humanApprovalRequired": { "type": "boolean" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

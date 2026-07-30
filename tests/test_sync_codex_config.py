@@ -73,6 +73,8 @@ class SyncSafetyTests(unittest.TestCase):
             "scripts/sync_codex_config.py",
             "--root",
             str(self.repo),
+            "--branch",
+            "main",
             *arguments,
             cwd=self.repo,
             check=check,

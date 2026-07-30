@@ -118,10 +118,10 @@ As quatro autorizações são independentes:
 Exemplos:
 
 ```sh
-python3 scripts/sync_codex_config.py --fetch
-python3 scripts/sync_codex_config.py --pull
-python3 scripts/sync_codex_config.py --commit
-python3 scripts/sync_codex_config.py --push
+python3 scripts/sync_codex_config.py --branch beta --fetch
+python3 scripts/sync_codex_config.py --branch beta --pull
+python3 scripts/sync_codex_config.py --branch beta --commit
+python3 scripts/sync_codex_config.py --branch beta --push
 ```
 
 Mesmo quando executadas em sequência, as flags registram autorizações
@@ -156,12 +156,15 @@ Variáveis atuais:
 HUBICG_REPO="/path/to/repository"
 HUBICG_CONFIG_FILE=".promptsConfig/codex-primary-context.md"
 HUBICG_REMOTE="origin"
-HUBICG_BRANCH="main"
+HUBICG_BRANCH="beta"
 ```
 
 Por compatibilidade, `CODEX_CONFIG_REPO`, `CODEX_CONFIG_FILE`,
 `CODEX_CONFIG_REMOTE` e `CODEX_CONFIG_BRANCH` ainda são aceitas quando a
 variável HubICG correspondente não estiver definida.
+
+Esta árvore usa `beta` como branch padrão. Uma instalação baseada na `main`
+deve informar `--branch main` ou `HUBICG_BRANCH=main`.
 
 ## Versionamento
 

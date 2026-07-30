@@ -15,7 +15,7 @@ roles, guardrails, rastreabilidade e autorização humana explícita.
 | HGC module ID | `intent-context-governance` |
 | Slug canônico de destino | `hubtech-intent-context-governance-framework` |
 | Alias legado | `codex-ai-ml-config` |
-| Configuração ativa | v2 |
+| Configuração ativa | v4 |
 | Contexto primário | v3 |
 
 > O alias legado permanece apenas para compatibilidade de caminhos, scripts e
@@ -50,19 +50,19 @@ Legenda:
 
 | Capacidade | Status | Evidência ou limite atual |
 |---|---|---|
-| Configuração ativa e snapshots | Implementado | Configuração v2 e cadeia append-only; snapshots antigos têm validação estrutural e o snapshot ativo é comparado integralmente. |
+| Configuração ativa e snapshots | Implementado | Configuração v4 e cadeia append-only; snapshots v1–v3 permanecem imutáveis e o snapshot ativo é comparado integralmente. |
 | Biblioteca de roles | Implementado | 60 roles Principal, índice determinístico e SHA-256. |
 | Instalação do bootstrap | Implementado | Instaladores Linux/macOS e Windows. |
 | Sincronização Git segura | Implementado | Status read-only por padrão; fetch, pull, commit e push exigem flags separadas. |
-| Schemas e CI | Implementado | Quatro schemas, testes temporários de Git, compilação e secret scan simples. |
+| Schemas e CI | Implementado | Quatro schemas do núcleo, testes temporários de Git, compilação e secret scan simples; os contratos experimentais do gateway permanecem na `beta`. |
 | Auditoria de chats | Parcial | Schema e arquivos append-only; não há importador, redator ou política automatizada de retenção. |
 | Identificação/sugestão de role | Parcial | Router declarativo orienta a LLM; não há classificador determinístico. |
 | Guardrails | Parcial | Regras de autorização e segurança em prompts; ainda não há policy engine. |
-| Extração estruturada de intenção | Especificado | Contratos experimentais podem ser incubados na `beta`; não há runtime na `main`. |
+| Extração estruturada de intenção | Especificado | Existe contrato experimental na `beta`; não há extractor executável. |
 | Compactação e perfis de contexto | Especificado | Arquitetura experimental; sem compactador executável. |
 | Medição de tokens, tempo e custo | Planejado | Não há tokenizer, benchmark ou telemetria de runtime. |
 | Reescrita transparente de prompts | Planejado | Não há optimizer, lint ou diff semântico executável. |
-| Adapters de provedores e modelos | Planejado | Nenhum SDK ou endpoint de inferência faz parte da `main`. |
+| Adapters de provedores e modelos | Planejado | Nenhum SDK ou endpoint de inferência foi implementado no repositório. |
 
 ## Arquitetura do núcleo atual
 
@@ -183,16 +183,16 @@ Cada mutação exige uma autorização explícita e independente:
 
 ```sh
 # Atualizar somente a remote-tracking branch
-python3 scripts/sync_codex_config.py --fetch
+python3 scripts/sync_codex_config.py --branch beta --fetch
 
 # Autorizar fetch + fast-forward em worktree limpo
-python3 scripts/sync_codex_config.py --pull
+python3 scripts/sync_codex_config.py --branch beta --pull
 
 # Criar commit local contendo somente o contexto primário
-python3 scripts/sync_codex_config.py --commit
+python3 scripts/sync_codex_config.py --branch beta --commit
 
 # Publicar somente commits cujo escopo seja o contexto primário
-python3 scripts/sync_codex_config.py --push
+python3 scripts/sync_codex_config.py --branch beta --push
 ```
 
 Autorizar uma operação não autoriza outra. O script recusa HEAD destacado,
@@ -226,6 +226,17 @@ Artefatos em `beta` são especificações em incubação até que código, teste
 critérios de aceite e promoção explícita comprovem sua implementação. Consulte
 a [árvore da branch beta](https://github.com/HUBTECH-DEV/hubtech-intent-context-governance-framework/tree/beta).
 
+### Especificações incubadas na `beta`
+
+| Artefato | Status |
+|---|---|
+| [Blueprint AI/ML](docs/ai-ml-project-blueprint.md) | Proposta técnica |
+| [Arquitetura do gateway](docs/architecture/model-agnostic-prompt-optimization-gateway.md) | Proposta; sem runtime |
+| [Backlog do gateway](docs/backlog/model-agnostic-prompt-gateway-backlog.md) | Backlog inicial |
+| [Runbook local](docs/runbooks/local-gateway-execution.md) | Fluxo pretendido, não comando disponível |
+| [ADRs](docs/architecture/prompt-optimization-gateway-index.md) | Dez decisões com status `Proposed` |
+| `docs/schemas/` | Três schemas experimentais e um contrato conceitual de provider |
+
 ## Segurança e privacidade
 
 - nenhum sync, commit ou push automático;
@@ -246,7 +257,7 @@ de minimização, consentimento e retenção aprovada.
 
 A configuração ativa e o contexto primário têm fluxos de versão distintos:
 
-- `agentconfig.json`: v2, ligada aos snapshots `history/vNNNN.json`;
+- `agentconfig.json`: v4, ligada aos snapshots `history/vNNNN.json`;
 - contexto primário: v3, versionado no frontmatter e no Git.
 
 Mudanças ativas geram nova versão e novo snapshot. Snapshots e entradas

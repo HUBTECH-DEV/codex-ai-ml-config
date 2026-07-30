@@ -24,6 +24,8 @@ Do not synchronize automatically. The synchronization command is read-only
 without an action flag. Fetch, pull, commit and push require the separate
 explicit flags `--fetch`, `--pull`, `--commit` and `--push` after user
 authorization.
+This configuration repository targets the `beta` integration branch; use
+`--branch beta` explicitly with an authorized mutation.
 
 If remote access is unavailable, report it and use only the last locally
 validated context. Never expose credentials or treat connectivity,

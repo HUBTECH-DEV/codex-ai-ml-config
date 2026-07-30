@@ -81,10 +81,25 @@ class FrameworkValidationTests(unittest.TestCase):
     def test_preexisting_historical_files_are_byte_preserved(self) -> None:
         expected = {
             ".promptsConfig/history/v0001.json": (
-                "22b562504ccb022517a1504be0f4b7c8680c75efe58f8870063095bdf1bc1ba5"
+                "c1f3c714be6ff5f1cd65ce63935799445a4ea69da68647a34bc2623be88f0b4d"
+            ),
+            ".promptsConfig/history/v0002.json": (
+                "817e0280c3f6169dfe1b88ac62dcec5c9c0c62be58ad276bab60f05176591d79"
+            ),
+            ".promptsConfig/history/v0003.json": (
+                "db9e7df57e9eb769324bf8c49abd3dcbfc1cc3acfb8f5b171da8c64e43f2cd92"
             ),
             ".promptsHistory/framework-bootstrap.json": (
-                "8df5dae5d72e1bf1cbfd66169a7a526d8e6c3e4e5ab4e27c21bfc5b538a317ff"
+                "f42fa61363a33b92b5b6d464be98ad05ec02fe5f0b1d860eb93016cd54c8cb2c"
+            ),
+            ".promptsHistory/ai-ml-beta-project-setup.json": (
+                "695889f46d2297e90807baf80a4f5d670ed87ffb1a2c95284f86967c77bd12ae"
+            ),
+            ".promptsHistory/github-migration-audit.json": (
+                "7b9d20ced46e9e97993b2fc9d8515b2b974b4748d018ad468b9d51ec20660938"
+            ),
+            "docs/releases/beta-v0.2.0.md": (
+                "d4150680ae93d61772c556d9eb73069863cd9d0972f62b57b6e3d8ba852c4183"
             ),
         }
         for relative, digest in expected.items():

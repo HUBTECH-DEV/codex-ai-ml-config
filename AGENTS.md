@@ -12,6 +12,8 @@ Do not synchronize automatically. Running
 `python scripts/sync_codex_config.py` without an action flag is read-only.
 Fetch, pull, commit and push require the separate explicit flags `--fetch`,
 `--pull`, `--commit` and `--push`, respectively, after user authorization.
+This integration tree targets `beta`; pass `--branch beta` explicitly when a
+mutation is authorized.
 
 If remote access is unavailable, report it and use the last locally validated
 configuration. Never expose credentials, rewrite history or force push.

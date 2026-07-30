@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hubtech.dev/schemas/aigw/intent-extraction.schema.json",
+  "title": "IntentExtraction",
+  "type": "object",
+  "required": ["taskType", "deliverable", "constraints", "acceptanceCriteria", "confidence"],
+  "properties": {
+    "taskType": {
+      "type": "string",
+      "enum": [
+        "code_generation",
+        "refactor",
+        "bugfix",
+        "architecture",
+        "documentation",
+        "review",
+        "research",
+        "planning",
+        "unknown"
+      ]
+    },
+    "domain": { "type": "string" },
+    "deliverable": { "type": "string" },
+    "constraints": { "type": "array", "items": { "type": "string" } },
+    "acceptanceCriteria": { "type": "array", "items": { "type": "string" } },
+    "risks": { "type": "array", "items": { "type": "string" } },
+    "missingInformation": { "type": "array", "items": { "type": "string" } },
+    "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "chatName": "hubicg-p0-beta-integration",
+  "createdAt": "2026-07-30T13:40:00Z",
+  "lastUpdated": "2026-07-30T13:40:00Z",
+  "messages": [
+    {
+      "timestamp": "2026-07-30T13:40:00Z",
+      "role": "user",
+      "content": "Approved the final P0 integration of the HubICG main baseline into beta, preserving the seven protected historical artifacts byte for byte and retaining all beta specifications with truthful capability status."
+    },
+    {
+      "timestamp": "2026-07-30T13:40:00Z",
+      "role": "assistant",
+      "content": "Integrated the HubICG P0 core into the beta working tree, created configuration version 4 and its snapshot, preserved the protected beta history, and prepared the combined tree for validation without commit or push."
+    }
+  ],
+  "metadata": {
+    "frameworkId": "intent-context-governance",
+    "configurationVersion": 4,
+    "targetBranch": "beta",
+    "changeType": "approved-p0-integration",
+    "mainP0BaseCommit": "28aed817b38687e643359369fe759f41dd129cee",
+    "betaSourceCommit": "1ede7efdc2134022bb64274c5f90a9a1da0ec7e9"
+  }
+}
