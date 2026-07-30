@@ -104,7 +104,10 @@ class SyncSafetyTests(unittest.TestCase):
     def test_commit_is_explicit_and_scoped_to_context(self) -> None:
         self.append_context()
         readme = self.repo / "README.md"
-        readme.write_text(readme.read_text(encoding="utf-8") + "\nlocal\n")
+        readme.write_text(
+            readme.read_text(encoding="utf-8") + "\nlocal\n",
+            encoding="utf-8",
+        )
         result = self.sync("--commit")
         self.assertIn("hubicg_sync=committed", result.stdout)
         committed = run(
@@ -131,7 +134,10 @@ class SyncSafetyTests(unittest.TestCase):
 
     def test_push_blocks_commits_outside_context_scope(self) -> None:
         readme = self.repo / "README.md"
-        readme.write_text(readme.read_text(encoding="utf-8") + "\nunsafe scope\n")
+        readme.write_text(
+            readme.read_text(encoding="utf-8") + "\nunsafe scope\n",
+            encoding="utf-8",
+        )
         run("git", "add", "README.md", cwd=self.repo)
         run("git", "commit", "-m", "unrelated", cwd=self.repo)
         result = self.sync("--push", check=False)
@@ -152,7 +158,10 @@ class SyncSafetyTests(unittest.TestCase):
         )
         self.configure_identity(writer)
         readme = writer / "README.md"
-        readme.write_text(readme.read_text(encoding="utf-8") + "\nremote update\n")
+        readme.write_text(
+            readme.read_text(encoding="utf-8") + "\nremote update\n",
+            encoding="utf-8",
+        )
         run("git", "add", "README.md", cwd=writer)
         run("git", "commit", "-m", "remote update", cwd=writer)
         run("git", "push", "origin", "main", cwd=writer)
