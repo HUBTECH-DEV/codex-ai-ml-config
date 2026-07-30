@@ -1,0 +1,85 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HUBTECH-DEV/hubtech-intent-context-governance-framework/raw/main/schemas/agentconfig.schema.json",
+  "title": "HubICG active agent configuration",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "projectName",
+    "createdAt",
+    "lastUpdated",
+    "currentVersion",
+    "agentConfigurationPrompt",
+    "agentProfile",
+    "projectRules",
+    "communicationRules",
+    "technicalRules",
+    "customInstructions",
+    "metadata"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "projectName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "lastUpdated": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "currentVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "agentConfigurationPrompt": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agentProfile": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projectRules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "communicationRules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "technicalRules": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "customInstructions": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": false
+}

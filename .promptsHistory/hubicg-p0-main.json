@@ -1,0 +1,23 @@
+{
+  "chatName": "hubicg-p0-main",
+  "createdAt": "2026-07-30T13:14:24Z",
+  "lastUpdated": "2026-07-30T13:14:24Z",
+  "messages": [
+    {
+      "timestamp": "2026-07-30T13:14:24Z",
+      "role": "user",
+      "content": "Approved P0: establish HubICG identity, truthful public documentation, two missing roles, append-only configuration version 2, safe opt-in synchronization, schemas, tests and CI checks."
+    },
+    {
+      "timestamp": "2026-07-30T13:14:24Z",
+      "role": "assistant",
+      "content": "Delivered the approved P0 baseline while preserving all prior snapshots and chat-history entries as immutable evidence."
+    }
+  ],
+  "metadata": {
+    "frameworkId": "intent-context-governance",
+    "configurationVersion": 2,
+    "targetBranch": "main",
+    "changeType": "approved-p0"
+  }
+}

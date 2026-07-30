@@ -43,6 +43,6 @@ chmod 0644 "${temporary}"
 mv -f "${temporary}" "${target}"
 trap - EXIT HUP INT TERM
 
-echo "Installed: ${target}"
-echo "Configuration repository: ${repo_dir}"
-echo "Restart Codex or open a new thread."
+echo "Installed HubICG bootstrap: ${target}"
+echo "HubICG repository: ${repo_dir}"
+echo "Restart the AI client or open a new thread."

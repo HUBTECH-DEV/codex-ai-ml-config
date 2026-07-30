@@ -17,6 +17,7 @@ $history = Join-Path $repo ".promptsConfig/agentconfig-history.json"
 $roleLibrary = Join-Path $repo ".promptsLibrary/role-prompts-ti-senior.md"
 $roleManifest = Join-Path $repo ".promptsLibrary/MANIFEST.sha256"
 $roleIndex = Join-Path $repo ".promptsLibrary/role-index.json"
+$validator = Join-Path $repo "scripts/validate_codex_config.py"
 
 foreach ($required in @(
     $template,
@@ -25,7 +26,8 @@ foreach ($required in @(
     $history,
     $roleLibrary,
     $roleManifest,
-    $roleIndex
+    $roleIndex,
+    $validator
 )) {
     if (-not (Test-Path -LiteralPath $required -PathType Leaf)) {
         throw "Required file is missing: $required"
@@ -42,7 +44,7 @@ if ($active.schemaVersion -ne "1.0") {
 if ($active.currentVersion -ne $audit.currentVersion) {
     throw "Active configuration and history versions differ."
 }
-if ($roles.roles.Count -lt 50) {
+if ($roles.roles.Count -lt 60) {
     throw "Role index is incomplete."
 }
 
@@ -54,6 +56,15 @@ $actualHash = (
 ).Hash.ToUpperInvariant()
 if ($expectedHash -ne $actualHash) {
     throw "Role library checksum mismatch."
+}
+
+$python = Get-Command python -ErrorAction SilentlyContinue
+if (-not $python) {
+    throw "Python 3 is required to validate HubICG."
+}
+& $python.Source $validator --root $repo --quiet
+if ($LASTEXITCODE -ne 0) {
+    throw "HubICG validation failed."
 }
 
 New-Item -ItemType Directory -Path $CodexHome -Force | Out-Null
@@ -85,6 +96,6 @@ try {
     }
 }
 
-Write-Host "Installed: $target"
-Write-Host "Configuration repository: $repo"
-Write-Host "Restart Codex or open a new thread."
+Write-Host "Installed HubICG bootstrap: $target"
+Write-Host "HubICG repository: $repo"
+Write-Host "Restart the AI client or open a new thread."

@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/HUBTECH-DEV/hubtech-intent-context-governance-framework/raw/main/schemas/role-index.schema.json",
+  "title": "HubICG deterministic role index",
+  "type": "object",
+  "required": [
+    "schemaVersion",
+    "libraryFile",
+    "defaultBehavior",
+    "roles"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "libraryFile": {
+      "const": ".promptsLibrary/role-prompts-ti-senior.md"
+    },
+    "defaultBehavior": {
+      "type": "object",
+      "required": [
+        "tone",
+        "decisionPolicy",
+        "operatingMode",
+        "documentationTarget"
+      ],
+      "properties": {
+        "tone": {
+          "type": "string"
+        },
+        "decisionPolicy": {
+          "type": "string"
+        },
+        "operatingMode": {
+          "type": "string"
+        },
+        "documentationTarget": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "roles": {
+      "type": "array",
+      "minItems": 60,
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "name",
+          "area",
+          "section",
+          "seniority"
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z0-9]+(?:-[a-z0-9]+)*$"
+          },
+          "name": {
+            "type": "string",
+            "pattern": "^Principal "
+          },
+          "area": {
+            "type": "string",
+            "minLength": 1
+          },
+          "section": {
+            "type": "string",
+            "minLength": 1
+          },
+          "seniority": {
+            "const": "principal"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

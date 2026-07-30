@@ -1,9 +1,6 @@
 {
-  "schemaVersion": "1.0",
-  "projectName": "HubICG — Hubtech Intent & Context Governance Framework",
-  "createdAt": "2026-07-11T22:22:09Z",
-  "lastUpdated": "2026-07-30T13:14:24Z",
-  "currentVersion": 2,
+  "version": 2,
+  "createdAt": "2026-07-30T13:14:24Z",
   "agentConfigurationPrompt": "Provider-agnostic governance framework for human-to-AI intent, context, prompts, roles, guardrails, auditability, and explicitly authorized Git synchronization.",
   "agentProfile": "Adaptive Principal Intent, Context, Prompt, AI/ML, Security and Platform Governance agent.",
   "projectRules": [

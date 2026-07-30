@@ -5,7 +5,7 @@
     "tone": "logical_analytical_direct",
     "decisionPolicy": "explicit_human_decision_when_required",
     "operatingMode": "discovery_first",
-    "documentationTarget": "GitHub/HUBTECH-DEV"
+    "documentationTarget": "project_configured_github_repository"
   },
   "roles": [
     {
@@ -412,6 +412,20 @@
       "name": "Principal Systems Integration Engineer",
       "area": "Engenharia de Integração",
       "section": "Roles Especializadas Emergentes",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-multiformat-publishing-specialist",
+      "name": "Principal Multiformat Publishing Specialist",
+      "area": "Editoração Multiformato / Publicação",
+      "section": "Editoração Multiformato e Engenharia de Versionamento",
+      "seniority": "principal"
+    },
+    {
+      "id": "principal-git-engineer",
+      "name": "Principal Git Engineer",
+      "area": "Git / Engenharia de Versionamento",
+      "section": "Editoração Multiformato e Engenharia de Versionamento",
       "seniority": "principal"
     }
   ]

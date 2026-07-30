@@ -1,7 +1,7 @@
 {
   "schemaVersion": "1.0",
-  "projectName": "Codex AI ML Config",
-  "currentVersion": 1,
+  "projectName": "HubICG — Hubtech Intent & Context Governance Framework",
+  "currentVersion": 2,
   "versions": [
     {
       "version": 1,
@@ -13,6 +13,17 @@
       "newVersion": 1,
       "rollback": null,
       "snapshotFile": "history/v0001.json"
+    },
+    {
+      "version": 2,
+      "timestamp": "2026-07-30T13:14:24Z",
+      "changedBy": "user-approved-p0",
+      "reason": "Adopt the provider-agnostic HubICG identity and approved P0 governance baseline.",
+      "summaryOfModifications": "Renamed the active framework, registered its HGC module identity and legacy alias, separated synchronization authorizations, and established honest capability-status reporting.",
+      "previousVersion": 1,
+      "newVersion": 2,
+      "rollback": null,
+      "snapshotFile": "history/v0002.json"
     }
   ]
 }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a deterministic role index from the versioned Markdown library."""
+"""Build the deterministic HubICG role index from the Markdown library."""
 
 from __future__ import annotations
 
@@ -66,7 +66,7 @@ def build_index(library: Path) -> dict[str, object]:
             "tone": "logical_analytical_direct",
             "decisionPolicy": "explicit_human_decision_when_required",
             "operatingMode": "discovery_first",
-            "documentationTarget": "GitHub/HUBTECH-DEV",
+            "documentationTarget": "project_configured_github_repository",
         },
         "roles": roles,
     }
